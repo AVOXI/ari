@@ -240,10 +240,12 @@ func (s *playSession) Stop() {
 		s.cancel()
 	}
 
+	s.mu.Lock()
 	if !s.closed {
 		s.closed = true
 		close(s.done)
 	}
+	s.mu.Unlock()
 }
 
 func (s *playSession) watchMaxTime(ctx context.Context) {
