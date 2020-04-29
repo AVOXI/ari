@@ -3,7 +3,7 @@ package native
 import (
 	"errors"
 
-	"github.com/CyCoreSystems/ari"
+	"github.com/Marquis42/ari"
 )
 
 // DeviceState provides the ARI DeviceState accessors for the native client

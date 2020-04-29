@@ -11,9 +11,9 @@ import (
 
 	"github.com/inconshreveable/log15"
 
-	"github.com/CyCoreSystems/ari"
-	"github.com/CyCoreSystems/ari/rid"
-	"github.com/CyCoreSystems/ari/stdbus"
+	"github.com/Marquis42/ari"
+	"github.com/Marquis42/ari/rid"
+	"github.com/Marquis42/ari/stdbus"
 	"github.com/pkg/errors"
 	"golang.org/x/net/websocket"
 )
