@@ -6,10 +6,10 @@ import (
 
 	"github.com/inconshreveable/log15"
 
-	"github.com/CyCoreSystems/ari"
-	"github.com/CyCoreSystems/ari/client/native"
-	"github.com/CyCoreSystems/ari/ext/play"
-	"github.com/CyCoreSystems/ari/rid"
+	"github.com/Marquis42/ari"
+	"github.com/Marquis42/ari/client/native"
+	"github.com/Marquis42/ari/ext/play"
+	"github.com/Marquis42/ari/rid"
 	"github.com/pkg/errors"
 )
 
