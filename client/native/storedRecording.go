@@ -3,7 +3,7 @@ package native
 import (
 	"errors"
 
-	"github.com/Marquis42/ari"
+	"github.com/CyCoreSystems/ari"
 )
 
 // StoredRecording provides the ARI StoredRecording accessors for the native client

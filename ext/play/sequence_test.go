@@ -7,8 +7,8 @@ import (
 
 	"time"
 
-	"github.com/Marquis42/ari"
-	"github.com/Marquis42/ari/client/arimocks"
+	"github.com/CyCoreSystems/ari"
+	"github.com/CyCoreSystems/ari/client/arimocks"
 	"github.com/stretchr/testify/mock"
 )
 

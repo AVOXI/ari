@@ -3,7 +3,7 @@ package native
 import (
 	"errors"
 
-	"github.com/Marquis42/ari"
+	"github.com/CyCoreSystems/ari"
 )
 
 // Playback provides the ARI Playback accessors for the native client

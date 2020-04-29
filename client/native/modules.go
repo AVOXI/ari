@@ -3,7 +3,7 @@ package native
 import (
 	"errors"
 
-	"github.com/Marquis42/ari"
+	"github.com/CyCoreSystems/ari"
 )
 
 // Modules provides the ARI modules accessors for a native client

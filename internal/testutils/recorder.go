@@ -1,6 +1,6 @@
 package testutils
 
-import "github.com/Marquis42/ari"
+import "github.com/CyCoreSystems/ari"
 
 // A RecorderPair is the pair of results returned from a mock Record request
 type RecorderPair struct {

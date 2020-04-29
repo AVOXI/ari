@@ -1,7 +1,7 @@
 package native
 
 import (
-	"github.com/Marquis42/ari"
+	"github.com/CyCoreSystems/ari"
 	"github.com/pkg/errors"
 )
 

@@ -4,7 +4,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/Marquis42/ari"
+	"github.com/CyCoreSystems/ari"
 )
 
 var dtmfTestEventData = `
