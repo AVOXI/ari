@@ -1,5 +1,5 @@
 # ari - Golang Asterisk Rest Interface (ARI) library
-[![Build Status](https://travis-ci.org/Marquis42/ari.png)](https://travis-ci.org/Marquis42/ari) [![](https://godoc.org/github.com/Marquis42/ari?status.svg)](http://godoc.org/github.com/Marquis42/ari)
+[![Build Status](https://travis-ci.org/CyCoreSystems/ari.png)](https://travis-ci.org/CyCoreSystems/ari) [![](https://godoc.org/github.com/CyCoreSystems/ari?status.svg)](http://godoc.org/github.com/CyCoreSystems/ari)
 
 This library allows you to easily access ARI in go applications.  The Asterisk Rest Interface (https://wiki.asterisk.org/wiki/pages/viewpage.action?pageId=29395573) is an asynchronous API which allows you to access basic Asterisk objects for custom communications applications.  
 
@@ -16,11 +16,11 @@ the API.
 
 There is also a NATS-based `ari-proxy` which is designed to work with this
 client library.  It can be found at
-[Marquis42/ari-proxy](https://github.com/Marquis42/ari-proxy).
+[CyCoreSystems/ari-proxy](https://github.com/CyCoreSystems/ari-proxy).
 
 Install with: 
 ```sh 
-go get github.com/Marquis42/ari
+go get github.com/CyCoreSystems/ari
 ```
 
 # Features
@@ -193,7 +193,7 @@ There are a number of extensions which wrap the lower-level operations in
 higher-level ones, making it easier to perform many common tasks.
 
 
-### AudioURI [![](https://godoc.org/github.com/Marquis42/ari?status.svg)](http://godoc.org/github.com/Marquis42/ari/ext/audiouri)
+### AudioURI [![](https://godoc.org/github.com/CyCoreSystems/ari?status.svg)](http://godoc.org/github.com/CyCoreSystems/ari/ext/audiouri)
 
 Constructing Asterisk audio playback URIs can be a bit tedious, particularly for handling
 certain edge cases in digits and for constructing dates.
@@ -201,7 +201,7 @@ certain edge cases in digits and for constructing dates.
 The `audiouri` package provides a number of routines to make the construction of
 these URIs simpler.
 
-### Bridgemon [![](https://godoc.org/github.com/Marquis42/ari?status.svg)](http://godoc.org/github.com/Marquis42/ari/ext/bridgemon)
+### Bridgemon [![](https://godoc.org/github.com/CyCoreSystems/ari?status.svg)](http://godoc.org/github.com/CyCoreSystems/ari/ext/bridgemon)
 
 Monitoring a bridge for events and data updates is not difficult, but it
 involves a lot of code and often makes several wasteful calls to obtain bridge
@@ -214,7 +214,7 @@ retrieve the updated data without multiple requests.
 It also shuts itself down automatically when the bridge it is monitoring is
 destroyed.
 
-### Play [![](https://godoc.org/github.com/Marquis42/ari?status.svg)](http://godoc.org/github.com/Marquis42/ari/ext/play)
+### Play [![](https://godoc.org/github.com/CyCoreSystems/ari?status.svg)](http://godoc.org/github.com/CyCoreSystems/ari/ext/play)
 
 Playback of media and waiting for (DTMF) responses therefrom is an incredibly
 common task in telephony.  ARI provides many tools to perform these types of
@@ -232,7 +232,7 @@ The execution of a `Play` is configured by any number of option functions, which
 supply structured modifiers for the behaviour of the playback.  You can even
 supply your own Match function for highly-customized matching.
 
-### Record [![](https://godoc.org/github.com/Marquis42/ari?status.svg)](http://godoc.org/github.com/Marquis42/ari/ext/record)
+### Record [![](https://godoc.org/github.com/CyCoreSystems/ari?status.svg)](http://godoc.org/github.com/CyCoreSystems/ari/ext/record)
 
 Making recordings is another complicated but common task for ARI applications.
 The `ext/record`, we provide a simple wrapper which facilitates many common
@@ -247,7 +247,7 @@ Features include:
 
 # Documentation and Examples
 
-Go documentation is available at https://godoc.org/github.com/Marquis42/ari
+Go documentation is available at https://godoc.org/github.com/CyCoreSystems/ari
 
 Examples for helloworld, play, script, bridge, and record are available.  Set your environment variables as described above (at minimum, `ARI_USERNAME` and `ARI_PASSWORD`) and run:
 
