@@ -2,23 +2,36 @@
 
 
 [[projects]]
-  digest = "1:56c130d885a4aacae1dd9c7b71cfe39912c7ebc1ff7d2b46083c8812996dc43b"
+  digest = "1:b5ec4fe04266e668a182e33ac94dbf9c329abb23313ff051c5277af3f3d98a75"
+  name = "github.com/CyCoreSystems/ari"
+  packages = [
+    ".",
+    "client/arimocks",
+    "rid",
+    "stdbus",
+  ]
+  pruneopts = ""
+  revision = "0c52b7f7ef25c27be1f00f7719be8bad6983f1de"
+  version = "v5.0.2"
+
+[[projects]]
+  digest = "1:0deddd908b6b4b768cfc272c16ee61e7088a60f7fe2f06c547bd3d8e1f8b8e77"
   name = "github.com/davecgh/go-spew"
   packages = ["spew"]
   pruneopts = ""
-  revision = "346938d642f2ec3594ed81d874461961cd0faa76"
-  version = "v1.1.0"
+  revision = "8991bc29aa16c548c550c7ff78260e27b9ab7c73"
+  version = "v1.1.1"
 
 [[projects]]
-  digest = "1:9ca737b471693542351e112c9e86be9bf7385e42256893a09ecb2a98e2036f74"
+  digest = "1:a01080d20c45c031c13f3828c56e58f4f51d926a482ad10cc0316225097eb7ea"
   name = "github.com/go-stack/stack"
   packages = ["."]
   pruneopts = ""
-  revision = "259ab82a6cad3992b4e21ff5cac294ccb06474bc"
-  version = "v1.7.0"
+  revision = "2fee6af1a9795aafbe0253a0cfbdf668e1fb8a9a"
+  version = "v1.8.0"
 
 [[projects]]
-  digest = "1:0a3f6a0c68ab8f3d455f8892295503b179e571b7fefe47cc6c556405d1f83411"
+  digest = "1:d69d2ba23955582a64e367ff2b0808cdbd048458c178cea48f11ab8c40bd7aea"
   name = "github.com/gogo/protobuf"
   packages = [
     "gogoproto",
@@ -28,48 +41,48 @@
     "types",
   ]
   pruneopts = ""
-  revision = "1adfc126b41513cc696b209667c8656ea7aac67c"
-  version = "v1.0.0"
+  revision = "5628607bb4c51c3157aacc3a50f0ab707582b805"
+  version = "v1.3.1"
 
 [[projects]]
-  digest = "1:cd42e7799605c57153280b45612419aa2657798bea700c04bd8980c00fb88edc"
+  digest = "1:a970a0ada840519f69920ea4ce6be93ef6bbe04843730983ba699c06021fd789"
   name = "github.com/inconshreveable/log15"
   packages = ["."]
   pruneopts = ""
-  revision = "0decfc6c20d9ca0ad143b0e89dcaa20f810b4fb3"
-  version = "v2.13"
+  revision = "b30bc20e4fd12cec79a9aae62e91cfcf458bd253"
+  version = "v2.15"
 
 [[projects]]
-  digest = "1:9ea83adf8e96d6304f394d40436f2eb44c1dc3250d223b74088cc253a6cd0a1c"
+  digest = "1:a947becd67c07396eb5e9fe6c3a14964b4987faf96b988e271a980e6a3ad2d0d"
   name = "github.com/mattn/go-colorable"
   packages = ["."]
   pruneopts = ""
-  revision = "167de6bfdfba052fa6b2d3664c8f5272e23c9072"
-  version = "v0.0.9"
+  revision = "f6c00982823144337e56cdb71c712eaac151d29c"
+  version = "v0.1.7"
 
 [[projects]]
-  digest = "1:78229b46ddb7434f881390029bd1af7661294af31f6802e0e1bedaad4ab0af3c"
+  digest = "1:87fecb4f5564bd9bc810e4c83d4ac434fd17599edc7b35e27580c2cfc48cdb7c"
   name = "github.com/mattn/go-isatty"
   packages = ["."]
   pruneopts = ""
-  revision = "0360b2af4f38e8d38c7fce2a9f4e702702d73a39"
-  version = "v0.0.3"
+  revision = "7b513a986450394f7bbf1476909911b3aa3a55ce"
+  version = "v0.0.12"
 
 [[projects]]
-  digest = "1:ef57aecdf87b09455aeab4413d7e2cd15a0021fddfaa654ffb74cf266068788b"
+  digest = "1:996b8a7ca2c2018ad7e645e867de8dd325be2a4aa6a4a422701b4ddd7f0060b2"
   name = "github.com/oklog/ulid"
   packages = ["."]
   pruneopts = ""
-  revision = "d311cb43c92434ec4072dfbbda3400741d0a6337"
-  version = "v0.3.0"
+  revision = "be3bccf06dda9a40aa6800c4736ac77f2fef987f"
+  version = "v2.0.2"
 
 [[projects]]
-  digest = "1:7365acd48986e205ccb8652cc746f09c8b7876030d53710ea6ef7d0bd0dcd7ca"
+  digest = "1:1d7e1867c49a6dd9856598ef7c3123604ea3daabf5b83f303ff457bcbc410b1d"
   name = "github.com/pkg/errors"
   packages = ["."]
   pruneopts = ""
-  revision = "645ef00459ed84a119197bfb8d8205042c6df63d"
-  version = "v0.8.0"
+  revision = "ba968bfe8b2f7e042a574c888954fccecfa385b4"
+  version = "v0.8.1"
 
 [[projects]]
   digest = "1:256484dbbcd271f9ecebc6795b2df8cad4c458dd0f5fd82a8c2fa0c29f233411"
@@ -80,44 +93,59 @@
   version = "v1.0.0"
 
 [[projects]]
-  digest = "1:306417ea2f31ea733df356a2b895de63776b6a5107085b33458e5cd6eb1d584d"
+  digest = "1:9768dcdfe7beb510a0880b8692ea954fed70f598f602b3d93bec8b9404648f08"
   name = "github.com/stretchr/objx"
   packages = ["."]
   pruneopts = ""
-  revision = "facf9a85c22f48d2f52f2380e4efce1768749a89"
-  version = "v0.1"
+  revision = "35313a95ee26395aa17d366c71a2ccf788fa69b6"
+  version = "v0.3.0"
 
 [[projects]]
-  digest = "1:a30066593578732a356dc7e5d7f78d69184ca65aeeff5939241a3ab10559bb06"
+  digest = "1:83fd2513b9f6ae0997bf646db6b74e9e00131e31002116fda597175f25add42d"
   name = "github.com/stretchr/testify"
   packages = [
     "assert",
     "mock",
   ]
   pruneopts = ""
-  revision = "12b6f73e6084dad08a7c6e575284b177ecafbc71"
-  version = "v1.2.1"
+  revision = "f654a9112bbeac49ca2cd45bfbe11533c4666cf8"
+  version = "v1.6.1"
 
 [[projects]]
   branch = "master"
-  digest = "1:58977d25cdcfe647173e2282e77f88797750d8124ad7417174afcaea301d4a6a"
+  digest = "1:6328971ba64f6476ca35920ff04f1be7f04c35ce450d0fbe8f65f82c1cd2c6ab"
   name = "golang.org/x/net"
   packages = ["websocket"]
   pruneopts = ""
-  revision = "6078986fec03a1dcc236c34816c71b0e05018fda"
+  revision = "62affa334b73ec65ed44a326519ac12c421905e3"
 
 [[projects]]
   branch = "master"
-  digest = "1:39d88a855976e160babdd254802e1c2ae75ed380328c39742b57928852da6207"
+  digest = "1:21c6dc0ff18156eaf3088cb757e9d963ea0db6136496a2e2db8dfb4cfeafa1f0"
   name = "golang.org/x/sys"
-  packages = ["unix"]
+  packages = [
+    "internal/unsafeheader",
+    "unix",
+  ]
   pruneopts = ""
-  revision = "13d03a9a82fba647c21a0ef8fba44a795d0f0835"
+  revision = "d2e65c121b96ff63726fb564ece016e70ec81a44"
+
+[[projects]]
+  branch = "v3"
+  digest = "1:2e9c4d6def1d36dcd17730e00c06b49a2e97ea5e1e639bcd24fa60fa43e33ad6"
+  name = "gopkg.in/yaml.v3"
+  packages = ["."]
+  pruneopts = ""
+  revision = "eeeca48fe7764f320e4870d231902bf9c1be2c08"
 
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
   input-imports = [
+    "github.com/CyCoreSystems/ari",
+    "github.com/CyCoreSystems/ari/client/arimocks",
+    "github.com/CyCoreSystems/ari/rid",
+    "github.com/CyCoreSystems/ari/stdbus",
     "github.com/gogo/protobuf/gogoproto",
     "github.com/gogo/protobuf/proto",
     "github.com/gogo/protobuf/types",
