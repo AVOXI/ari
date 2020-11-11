@@ -467,8 +467,18 @@ func (s *recordingSession) collectDtmf(ctx context.Context, dtmfSub ari.Subscrip
 
 func (s *recordingSession) watchHangup(ctx context.Context, hangupSub ari.Subscription) {
 	select {
-	case <-hangupSub.Events():
-		s.res.Hangup = true
+	case e := <-hangupSub.Events():
+		if e != nil {
+			Logger.Debug("watchHangup: Received a hangup",
+				"app", e.GetApplication(),
+				"dialog", e.GetDialog(),
+				"node", e.GetNode(),
+				"type", e.GetType(),
+			)
+			s.res.Hangup = true
+		} else {
+			Logger.Info("Received a hangup a nil hangup event, not setting res.Hangup")
+		}
 	case <-ctx.Done():
 	}
 }
