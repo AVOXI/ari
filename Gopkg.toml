@@ -26,10 +26,6 @@
   branch = "ex_fix_close_panic"
 
 [[constraint]]
-  name = "github.com/gogo/protobuf"
-  version = "1.0.0"
-
-[[constraint]]
   name = "github.com/inconshreveable/log15"
   version = "2.13.0"
 

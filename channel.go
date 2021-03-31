@@ -5,7 +5,6 @@ import (
 	"strings"
 	"time"
 
-	ptypes "github.com/gogo/protobuf/types"
 	"github.com/pkg/errors"
 )
 
@@ -138,7 +137,7 @@ type channelDataJSON struct {
 
 // MarshalJSON encodes ChannelData to JSON
 func (d *ChannelData) MarshalJSON() ([]byte, error) {
-	t, err := ptypes.TimestampFromProto(d.Creationtime)
+	t, err := timestampFromProto(d.Creationtime)
 	if err != nil {
 		Logger.Debug("ignoring failed creationtime timestamp parsing", "error", err)
 	}
@@ -165,7 +164,7 @@ func (d *ChannelData) UnmarshalJSON(data []byte) error {
 		return err
 	}
 
-	t, err := ptypes.TimestampProto(time.Time(in.Creationtime))
+	t, err := timestampProto(time.Time(in.Creationtime))
 	if err != nil {
 		Logger.Debug("ignoring failed creationtime timestamp parsing", "error", err)
 	}

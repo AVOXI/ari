@@ -2,8 +2,8 @@
 
 
 [[projects]]
-  branch = "fix_close_panic"
-  digest = "1:7855fa6f983e9c9085b4464b3e2c9379fd1ff7b90f9371cff39f946301b50ba5"
+  branch = "ex_fix_close_panic"
+  digest = "1:3d2c9b9bfcc87e9df9cfff949dfc11cad3fba990cce5be9712652193faf747d7"
   name = "github.com/CyCoreSystems/ari"
   packages = [
     ".",
@@ -12,7 +12,7 @@
     "stdbus",
   ]
   pruneopts = ""
-  revision = "ecccaa2ba8b3a1c9c6989e985bf82723f3eb6e90"
+  revision = "75d2ee6df29f37ddde08c217f6ff6e749e680e36"
   source = "github.com/AVOXI/ari"
 
 [[projects]]
@@ -44,6 +44,17 @@
   pruneopts = ""
   revision = "5628607bb4c51c3157aacc3a50f0ab707582b805"
   version = "v1.3.1"
+
+[[projects]]
+  digest = "1:019270a39e03c8ff951f6e536014c87b418bb0ad90b358929dd7d556546ea093"
+  name = "github.com/golang/protobuf"
+  packages = [
+    "proto",
+    "ptypes/timestamp",
+  ]
+  pruneopts = ""
+  revision = "ae97035608a719c7a1c1c41bed0ae0744bdb0c6f"
+  version = "v1.5.2"
 
 [[projects]]
   digest = "1:a970a0ada840519f69920ea4ce6be93ef6bbe04843730983ba699c06021fd789"
@@ -132,6 +143,43 @@
   revision = "d2e65c121b96ff63726fb564ece016e70ec81a44"
 
 [[projects]]
+  digest = "1:0411230c1d513425d5d96a6b193fc50e635cbabf0c27a58869c17c3c8edc67c4"
+  name = "google.golang.org/protobuf"
+  packages = [
+    "encoding/prototext",
+    "encoding/protowire",
+    "internal/descfmt",
+    "internal/descopts",
+    "internal/detrand",
+    "internal/encoding/defval",
+    "internal/encoding/messageset",
+    "internal/encoding/tag",
+    "internal/encoding/text",
+    "internal/errors",
+    "internal/filedesc",
+    "internal/filetype",
+    "internal/flags",
+    "internal/genid",
+    "internal/impl",
+    "internal/order",
+    "internal/pragma",
+    "internal/set",
+    "internal/strs",
+    "internal/version",
+    "proto",
+    "reflect/protodesc",
+    "reflect/protoreflect",
+    "reflect/protoregistry",
+    "runtime/protoiface",
+    "runtime/protoimpl",
+    "types/descriptorpb",
+    "types/known/timestamppb",
+  ]
+  pruneopts = ""
+  revision = "f2d1f6cbe10b90d22296ea09a7217081c2798009"
+  version = "v1.26.0"
+
+[[projects]]
   branch = "v3"
   digest = "1:2e9c4d6def1d36dcd17730e00c06b49a2e97ea5e1e639bcd24fa60fa43e33ad6"
   name = "gopkg.in/yaml.v3"
@@ -147,9 +195,8 @@
     "github.com/CyCoreSystems/ari/client/arimocks",
     "github.com/CyCoreSystems/ari/rid",
     "github.com/CyCoreSystems/ari/stdbus",
-    "github.com/gogo/protobuf/gogoproto",
-    "github.com/gogo/protobuf/proto",
-    "github.com/gogo/protobuf/types",
+    "github.com/golang/protobuf/proto",
+    "github.com/golang/protobuf/ptypes/timestamp",
     "github.com/inconshreveable/log15",
     "github.com/oklog/ulid",
     "github.com/pkg/errors",
