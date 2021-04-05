@@ -25,7 +25,7 @@ type Key struct {
 	// "bridge", etc.
 	Kind string `protobuf:"bytes,1,opt,name=kind,proto3" json:"kind,omitempty"`
 	// ID indicates the unique identifier of the resource
-	ID string `protobuf:"bytes,2,opt,name=ID,proto3" json:"ID,omitempty"`
+	ID string `protobuf:"bytes,2,opt,name=ID,proto3" json:"id,omitempty"`
 	// Node indicates the unique identifier of the Asterisk node on which the
 	// resource exists or will be created
 	Node string `protobuf:"bytes,3,opt,name=node,proto3" json:"node,omitempty"`
@@ -149,7 +149,7 @@ type ChannelData struct {
 	// Key is the key of the channel
 	Key *Key `protobuf:"bytes,1,opt,name=key,proto3" json:"key,omitempty"`
 	// Id is the unique ID for this channel (AMI-style)
-	ID string `protobuf:"bytes,2,opt,name=ID,proto3" json:"ID,omitempty"`
+	ID string `protobuf:"bytes,2,opt,name=ID,proto3" json:"id,omitempty"`
 	// Name is the name of this channel (tect/name-id)
 	Name string `protobuf:"bytes,3,opt,name=name,proto3" json:"name,omitempty"`
 	// State is the current state of the channel
