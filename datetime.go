@@ -13,7 +13,7 @@ const DateFormat = "2006-01-02T15:04:05.000-0700"
 
 // DateTime is an alias type for attaching a custom
 // asterisk unmarshaller and marshaller for JSON
-type DateTime time.Time
+type DateTime = time.Time
 
 // MarshalJSON converts the given date object to ARIs date format
 func (dt DateTime) MarshalJSON() ([]byte, error) {
