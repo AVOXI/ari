@@ -219,8 +219,8 @@ type ChannelCreateRequest struct {
 	// the Originator is not specified
 	Formats string `json:"formats,omitempty"`
 
-	// Variables key in the body object holds variable key/value pairs to set on the channel on creation.
-	Variables map[string]string `json:"variables,omitempty"`
+	// // Variables key in the body object holds variable key/value pairs to set on the channel on creation.
+	// Variables map[string]string `json:"variables,omitempty"`
 }
 
 // SnoopOptions enumerates the non-required arguments for the snoop operation
