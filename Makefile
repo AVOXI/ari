@@ -4,7 +4,7 @@ SHELL = /usr/bin/env bash
 
 EVENT_SPEC_FILE = internal/eventgen/json/events-2.0.0.json
 
-all: dep check api clients contributors extensions test
+all: dep api clients contributors extensions test
 
 ci: check api clients extensions test
 

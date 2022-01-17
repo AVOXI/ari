@@ -4,8 +4,8 @@ import (
 	"errors"
 	"time"
 
-	"github.com/CyCoreSystems/ari/v5"
-	"github.com/CyCoreSystems/ari/v5/rid"
+	"github.com/AVOXI/ari/v5"
+	"github.com/AVOXI/ari/v5/rid"
 )
 
 // Bridge provides the ARI Bridge accessors for the native client
