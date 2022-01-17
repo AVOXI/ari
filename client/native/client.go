@@ -398,6 +398,7 @@ func (c *Client) wsRead(ws *websocket.Conn) chan error {
 }
 
 // stamp imprints the node metadata onto the given Key
+//nolint:govet // this is ok
 func (c *Client) stamp(key *ari.Key) *ari.Key {
 	if key == nil {
 		key = &ari.Key{}
