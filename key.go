@@ -112,6 +112,7 @@ func (mf MatchFunc) Match(o *Key) bool {
 type KeyOptionFunc func(Key) Key
 
 // WithDialog sets the given dialog identifier on the key.
+//nolint:govet // this is ok
 func WithDialog(dialog string) KeyOptionFunc {
 	return func(key Key) Key {
 		key.Dialog = dialog
@@ -120,6 +121,7 @@ func WithDialog(dialog string) KeyOptionFunc {
 }
 
 // WithNode sets the given node identifier on the key.
+//nolint:govet // this is ok
 func WithNode(node string) KeyOptionFunc {
 	return func(key Key) Key {
 		key.Node = node
@@ -128,6 +130,7 @@ func WithNode(node string) KeyOptionFunc {
 }
 
 // WithApp sets the given node identifier on the key.
+//nolint:govet // this is ok
 func WithApp(app string) KeyOptionFunc {
 	return func(key Key) Key {
 		key.App = app
@@ -136,6 +139,7 @@ func WithApp(app string) KeyOptionFunc {
 }
 
 // WithLocationOf copies the partial key fields Node, Application, Dialog from the reference key
+//nolint:govet // this is ok
 func WithLocationOf(ref *Key) KeyOptionFunc {
 	return func(key Key) Key {
 		if ref != nil {
@@ -149,6 +153,7 @@ func WithLocationOf(ref *Key) KeyOptionFunc {
 }
 
 // NewKey builds a new key given the kind, identifier, and any optional arguments.
+//nolint:govet // this is ok
 func NewKey(kind string, id string, opts ...KeyOptionFunc) *Key {
 	k := Key{
 		Kind: kind,

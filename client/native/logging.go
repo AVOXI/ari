@@ -1,7 +1,7 @@
 package native
 
 import (
-	"github.com/CyCoreSystems/ari/v5"
+	"github.com/AVOXI/ari/v5"
 	"github.com/rotisserie/eris"
 )
 

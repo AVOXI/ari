@@ -3,7 +3,7 @@ package native
 import (
 	"fmt"
 
-	"github.com/CyCoreSystems/ari/v5"
+	"github.com/AVOXI/ari/v5"
 	"github.com/rotisserie/eris"
 )
 

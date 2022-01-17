@@ -9,9 +9,9 @@ import (
 	"sync"
 	"time"
 
-	"github.com/CyCoreSystems/ari/v5"
-	"github.com/CyCoreSystems/ari/v5/rid"
-	"github.com/CyCoreSystems/ari/v5/stdbus"
+	"github.com/AVOXI/ari/v5"
+	"github.com/AVOXI/ari/v5/rid"
+	"github.com/AVOXI/ari/v5/stdbus"
 	"github.com/rotisserie/eris"
 
 	"github.com/inconshreveable/log15"
@@ -398,6 +398,7 @@ func (c *Client) wsRead(ws *websocket.Conn) chan error {
 }
 
 // stamp imprints the node metadata onto the given Key
+//nolint:govet // this is ok
 func (c *Client) stamp(key *ari.Key) *ari.Key {
 	if key == nil {
 		key = &ari.Key{}
