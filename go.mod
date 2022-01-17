@@ -8,7 +8,10 @@ require (
 	github.com/oklog/ulid v1.3.1
 	github.com/rotisserie/eris v0.5.1
 	github.com/stretchr/testify v1.7.0
+	github.com/vektra/mockery v1.1.2 // indirect
 	golang.org/x/net v0.0.0-20220114011407-0dd24b26b47d
+	golang.org/x/sys v0.0.0-20220114195835-da31bd327af9 // indirect
+	golang.org/x/tools v0.1.8 // indirect
 	google.golang.org/protobuf v1.27.1
 )
 
