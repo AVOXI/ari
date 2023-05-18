@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package asterisk.ari;
 
-option go_package = "ari";
+option go_package = "github.com/CyCoreSystems/ari";
 
 import "google/protobuf/timestamp.proto";
 
