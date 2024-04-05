@@ -3,6 +3,7 @@ package native
 import (
 	"bytes"
 	"encoding/json"
+	"fmt"
 	"io"
 	"net/http"
 	"time"
@@ -130,7 +131,7 @@ func (c *Client) makeRequest(method, url string, resp interface{}, req interface
 	if resp != nil {
 		err = json.NewDecoder(ret.Body).Decode(resp)
 		if err != nil {
-			return eris.Wrap(err, "failed to decode response")
+			return eris.Wrap(err, fmt.Sprintf("failed to decode response: %+v", resp))
 		}
 	}
 

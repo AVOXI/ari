@@ -21,13 +21,13 @@ import (
 // Logger defaults to a discard handler (null output).
 // If you wish to enable logging, you can set your own
 // handler like so:
-// 		ari.Logger.SetHandler(log15.StderrHandler)
 //
+//	ari.Logger.SetHandler(log15.StderrHandler)
 var Logger = log15.New()
 
 func init() {
 	// Null logger, by default
-	Logger.SetHandler(log15.DiscardHandler())
+	Logger.SetHandler(log15.StdoutHandler)
 }
 
 // Options describes the options for connecting to
@@ -398,6 +398,7 @@ func (c *Client) wsRead(ws *websocket.Conn) chan error {
 }
 
 // stamp imprints the node metadata onto the given Key
+//
 //nolint:govet // this is ok
 func (c *Client) stamp(key *ari.Key) *ari.Key {
 	if key == nil {
