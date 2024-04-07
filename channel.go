@@ -173,6 +173,9 @@ func (d *ChannelData) UnmarshalJSON(data []byte) error {
 		return err
 	}
 
+	Logger.Debug("marshaltest", "unmarshal before", data)
+	Logger.Debug("marshaltest", "unmarshal after", in)
+
 	t, err := timestampProto(time.Time(in.Creationtime))
 	if err != nil {
 		Logger.Debug("ignoring failed creationtime timestamp parsing", "error", err)

@@ -114,6 +114,7 @@ func DecodeEvent(data []byte) (Event, error) {
 	if typer.Type == "" {
 		return nil, eris.New("no type found")
 	}
+	Logger.Debug("DecodeEvent", "original data", string(data[:]))
 
 	switch typer.Type {
 	case Events.ApplicationMoveFailed:
@@ -275,6 +276,7 @@ func DecodeEvent(data []byte) (Event, error) {
 	case Events.StasisStart:
 		var e StasisStart
 		err = json.Unmarshal(data, &e)
+		Logger.Debug("DecodeEvent", "decoded data", &e)
 		return &e, err
 	case Events.TextMessageReceived:
 		var e TextMessageReceived

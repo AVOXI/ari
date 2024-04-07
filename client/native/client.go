@@ -385,9 +385,11 @@ func (c *Client) wsRead(ws *websocket.Conn) chan error {
 				return
 			}
 
+			Logger.Debug("wsRead", "websocket data", string(data[:]))
+
 			e, err := ari.DecodeEvent(data)
 			if err != nil {
-				errChan <- eris.Wrap(err, "failed to devoce websocket message to event")
+				errChan <- eris.Wrap(err, "failed to decode websocket message to event")
 			}
 
 			c.bus.Send(e)
