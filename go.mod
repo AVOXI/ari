@@ -1,4 +1,4 @@
-module github.com/AVOXI/ari/v5
+module github.com/CyCoreSystems/ari/v5
 
 require (
 	github.com/golang/protobuf v1.5.2

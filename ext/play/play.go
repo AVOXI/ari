@@ -3,7 +3,7 @@ package play
 import (
 	"context"
 
-	"github.com/AVOXI/ari/v5"
+	"github.com/CyCoreSystems/ari/v5"
 )
 
 // AllDTMF is a string which contains all possible

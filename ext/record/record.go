@@ -7,8 +7,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/AVOXI/ari/v5"
-	"github.com/AVOXI/ari/v5/rid"
+	"github.com/CyCoreSystems/ari/v5"
+	"github.com/CyCoreSystems/ari/v5/rid"
 	"github.com/rotisserie/eris"
 )
 
