@@ -124,6 +124,9 @@ type Channel interface {
 	// ExternalMedia creates a new non-telephony external media channel by which audio may be sent or received
 	ExternalMedia(key *Key, opts ExternalMediaOptions) (*ChannelHandle, error)
 
+	// RecordingFork sends an in-dialog recording-fork SIP MESSAGE on the channel.
+	RecordingFork(key *Key, opts RecordingForkOptions) (*RecordingForkResult, error)
+
 	// Subscribe subscribes on the channel events
 	Subscribe(key *Key, n ...string) Subscription
 }
@@ -268,6 +271,24 @@ type ExternalMediaOptions struct {
 
 	// Variables defines the set of channel variables which should be bound to this channel upon creation.  This parameter is optional.
 	Variables map[string]string `json:"variables"`
+}
+
+// RecordingForkOptions is the body of POST /channels/{channelId}/recordingFork.
+type RecordingForkOptions struct {
+	Action    string `json:"action"`
+	OrgID     string `json:"orgId"`
+	CallID    string `json:"callId"`
+	SentHost  string `json:"sentHost,omitempty"`
+	SentPort  int    `json:"sentPort,omitempty"`
+	HeardHost string `json:"heardHost,omitempty"`
+	HeardPort int    `json:"heardPort,omitempty"`
+	Codec     string `json:"codec,omitempty"`
+	TimeoutMs int    `json:"timeoutMs,omitempty"`
+}
+
+// RecordingForkResult is the SIP status returned by the recording-fork request.
+type RecordingForkResult struct {
+	SIPStatus int `json:"sipStatus"`
 }
 
 // ChannelHandle provides a wrapper on the Channel interface for operations on a particular channel ID.
@@ -532,6 +553,11 @@ func (ch *ChannelHandle) StageExternalMedia(opts ExternalMediaOptions) (*Channel
 // ExternalMedia creates a new non-telephony external media channel by which audio may be sent or received
 func (ch *ChannelHandle) ExternalMedia(opts ExternalMediaOptions) (*ChannelHandle, error) {
 	return ch.c.ExternalMedia(ch.key, opts)
+}
+
+// RecordingFork sends an in-dialog recording-fork SIP MESSAGE on this channel.
+func (ch *ChannelHandle) RecordingFork(opts RecordingForkOptions) (*RecordingForkResult, error) {
+	return ch.c.RecordingFork(ch.key, opts)
 }
 
 // ----
