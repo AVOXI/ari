@@ -428,6 +428,25 @@ func (c *Channel) StageExternalMedia(key *ari.Key, opts ari.ExternalMediaOptions
 	}), nil
 }
 
+// RecordingFork implements the ari.Channel interface.
+func (c *Channel) RecordingFork(key *ari.Key, opts ari.RecordingForkOptions) (*ari.RecordingForkResult, error) {
+	if key == nil || key.ID == "" {
+		return nil, errors.New("channel ID is mandatory")
+	}
+	var result ari.RecordingForkResult
+	err := c.client.post("/channels/"+key.ID+"/recordingFork", &result, &opts)
+	if result.SIPStatus >= 300 {
+		if err == nil {
+			err = fmt.Errorf("recording fork failed: SIP %d", result.SIPStatus)
+		}
+		return &result, err
+	}
+	if err != nil {
+		return &result, err
+	}
+	return &result, nil
+}
+
 // Dial dials the given calling channel identifier
 func (c *Channel) Dial(key *ari.Key, callingChannelID string, timeout time.Duration) error {
 	req := struct {

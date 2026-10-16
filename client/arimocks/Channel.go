@@ -153,6 +153,27 @@ func (_m *Channel) ExternalMedia(key *ari.Key, opts ari.ExternalMediaOptions) (*
 	return r0, r1
 }
 
+// RecordingFork provides a mock function with given fields: key, opts
+func (_m *Channel) RecordingFork(key *ari.Key, opts ari.RecordingForkOptions) (*ari.RecordingForkResult, error) {
+	ret := _m.Called(key, opts)
+
+	var r0 *ari.RecordingForkResult
+	if rf, ok := ret.Get(0).(func(*ari.Key, ari.RecordingForkOptions) *ari.RecordingForkResult); ok {
+		r0 = rf(key, opts)
+	} else if ret.Get(0) != nil {
+		r0 = ret.Get(0).(*ari.RecordingForkResult)
+	}
+
+	var r1 error
+	if rf, ok := ret.Get(1).(func(*ari.Key, ari.RecordingForkOptions) error); ok {
+		r1 = rf(key, opts)
+	} else {
+		r1 = ret.Error(1)
+	}
+
+	return r0, r1
+}
+
 // Get provides a mock function with given fields: key
 func (_m *Channel) Get(key *ari.Key) *ari.ChannelHandle {
 	ret := _m.Called(key)
