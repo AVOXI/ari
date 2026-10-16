@@ -125,6 +125,10 @@ type Channel interface {
 	ExternalMedia(key *Key, opts ExternalMediaOptions) (*ChannelHandle, error)
 
 	// RecordingFork sends an in-dialog recording-fork SIP MESSAGE on the channel.
+	// The result may be non-nil when err is non-nil. A rejected fork still
+	// returns the final SIP status, and a transport failure may return a
+	// decoded result alongside the error. Callers must read SIPStatus even
+	// when err is set.
 	RecordingFork(key *Key, opts RecordingForkOptions) (*RecordingForkResult, error)
 
 	// Subscribe subscribes on the channel events

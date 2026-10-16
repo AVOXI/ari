@@ -437,7 +437,7 @@ func (c *Channel) RecordingFork(key *ari.Key, opts ari.RecordingForkOptions) (*a
 	err := c.client.post("/channels/"+key.ID+"/recordingFork", &result, &opts)
 	if result.SIPStatus >= 300 {
 		if err == nil {
-			err = errors.New("recording fork failed")
+			err = fmt.Errorf("recording fork failed: SIP %d", result.SIPStatus)
 		}
 		return &result, err
 	}
