@@ -7,8 +7,8 @@ import (
 
 	"github.com/inconshreveable/log15"
 
-	"github.com/AVOXI/ari/v5"
-	"github.com/AVOXI/ari/v5/client/native"
+	"github.com/CyCoreSystems/ari/v5"
+	"github.com/CyCoreSystems/ari/v5/client/native"
 )
 
 var log = log15.New()

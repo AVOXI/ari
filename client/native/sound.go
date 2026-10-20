@@ -4,7 +4,7 @@ import (
 	"errors"
 	"net/url"
 
-	"github.com/AVOXI/ari/v5"
+	"github.com/CyCoreSystems/ari/v5"
 )
 
 // Sound provides the ARI Sound accessors for the native client
