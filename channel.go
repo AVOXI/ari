@@ -277,7 +277,7 @@ type ExternalMediaOptions struct {
 	Variables map[string]string `json:"variables"`
 }
 
-// RecordingForkOptions is the body of POST /channels/{channelId}/recordingFork.
+// RecordingForkOptions is the body of POST /avoxi/channels/{channelId}/recordingFork.
 type RecordingForkOptions struct {
 	Action    string `json:"action"`
 	OrgID     string `json:"orgId"`

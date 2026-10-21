@@ -428,13 +428,14 @@ func (c *Channel) StageExternalMedia(key *ari.Key, opts ari.ExternalMediaOptions
 	}), nil
 }
 
-// RecordingFork implements the ari.Channel interface.
+// RecordingFork implements the ari.Channel interface using the AVOXI-owned
+// ARI resource.
 func (c *Channel) RecordingFork(key *ari.Key, opts ari.RecordingForkOptions) (*ari.RecordingForkResult, error) {
 	if key == nil || key.ID == "" {
 		return nil, errors.New("channel ID is mandatory")
 	}
 	var result ari.RecordingForkResult
-	err := c.client.post("/channels/"+key.ID+"/recordingFork", &result, &opts)
+	err := c.client.post("/avoxi/channels/"+key.ID+"/recordingFork", &result, &opts)
 	if result.SIPStatus >= 300 {
 		if err == nil {
 			err = fmt.Errorf("recording fork failed: SIP %d", result.SIPStatus)
